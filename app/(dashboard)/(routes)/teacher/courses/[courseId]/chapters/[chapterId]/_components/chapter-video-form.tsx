@@ -6,7 +6,7 @@ import MuxPlayer from "@mux/mux-player-react";
 import { Pencil, PlusCircle, Video } from "lucide-react";
 import { useState } from "react";
 import toast from "react-hot-toast";
-import { useRouter } from "next/router"; // Changed from next/navigation to next/router
+import { useRouter } from "next/navigation";
 import { Chapter, MuxData } from "@prisma/client";
 import Image from "next/image";
 
@@ -39,14 +39,14 @@ export const ChapterVideoForm = ({
       await axios.patch(`/api/courses/${courseId}/chapters/${chapterId}`, values);
       toast.success("Chapter updated");
       toggleEdit();
-      router.replace(router.asPath); // Changed from router.refresh() to router.replace(router.asPath)
+      await replace(router.refresh());
     } catch {
       toast.error("Something went wrong");
     }
   }
 
   return (
-    <div className="mt-6 border bg-slate-100 rounded-md p-4">
+    <div className="mt-6 border bg-slate-100 dark:bg-neutral-800 rounded-md p-4">
       <div className="font-medium flex items-center justify-between">
         Chapter video
         <Button onClick={toggleEdit} variant="ghost">
@@ -69,7 +69,7 @@ export const ChapterVideoForm = ({
       </div>
       {!isEditing && (
         !initialData.videoUrl ? (
-          <div className="flex items-center justify-center h-60 bg-slate-200 rounded-md">
+          <div className="flex items-center justify-center h-60 bg-slate-200 dark:bg-neutral-800 rounded-md">
             <Video className="h-10 w-10 text-slate-500" />
           </div>
         ) : (
@@ -103,3 +103,7 @@ export const ChapterVideoForm = ({
     </div>
   )
 }
+function replace(arg0: void) {
+  throw new Error("Function not implemented.");
+}
+

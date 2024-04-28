@@ -114,7 +114,9 @@ export const NavbarRoutes = () => {
             </DropdownMenuItem>
             <DropdownMenuItem disabled>API</DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem className="text-[#ef4444]">
+            <DropdownMenuItem 
+                onClick={() => signOut()} 
+                className="text-[#ef4444]">
               Log out
               <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
             </DropdownMenuItem>

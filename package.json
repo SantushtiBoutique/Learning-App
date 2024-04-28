@@ -1,6 +1,6 @@
 {
-  "name": "lms-tutorial",
-  "version": "0.1.0",
+  "name": "milkyway-rides",
+  "version": "24.4.2",
   "private": true,
   "scripts": {
     "dev": "next dev",

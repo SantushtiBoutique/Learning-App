@@ -13,7 +13,14 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   manifest: "/manifest.json",
   title: 'Milkyway Rides',
-  description: 'Think Beyond The Limits',
+  description: 'Think Beyond The Limits.',
+  other: {
+    "twitter:image": "",
+    "twitter:card": "summary_large_image",
+    "og:url": "milkywayrides.vercel.app",
+    "og:image": "",
+    "og:type": "website",
+  }
 }
 
 export default function RootLayout({

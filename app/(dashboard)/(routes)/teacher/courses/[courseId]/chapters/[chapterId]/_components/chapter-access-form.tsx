@@ -66,7 +66,7 @@ export const ChapterAccessForm = ({
   }
 
   return (
-    <div className="mt-6 border bg-slate-100 rounded-md p-4">
+    <div className="mt-6 border bg-slate-100 rounded-md p-4 dark:bg-neutral-800">
       <div className="font-medium flex items-center justify-between">
         Chapter access
         <Button onClick={toggleEdit} variant="ghost">

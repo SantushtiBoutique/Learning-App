@@ -8,6 +8,7 @@ import { CoursesList } from "@/components/courses-list";
 import { InfoCard } from "./_components/info-card";
 import React from "react";
 
+
 export default async function Dashboard() {
   const { userId } = auth();
 
